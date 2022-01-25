@@ -4,3 +4,13 @@
 // and the greeting we want to render on the page
 
 // Render the welcome message using welcomeEl.innerText
+
+let welcomeEl = document.getElementById("welcome-el")
+
+let name = "Karla Delgado"
+let greeting = "Welcome back "
+
+welcomeEl.innerText = greeting + name
+
+welcomeEl.innerText = welcomeEl.innerText + " 👋"
+
