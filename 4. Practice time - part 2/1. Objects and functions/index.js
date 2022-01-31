@@ -6,3 +6,15 @@
 // "Per is 35 years old and lives in Norway"
 
 // Call the logData() function to verify that it works
+
+let person = {
+    name: "Karla",
+    age: 18,
+    country: "Venezuela"
+}
+
+function logData() {
+    console.log(person.name + " is " + person.age + " years old and lives in " + person.country)
+}
+
+logData()
