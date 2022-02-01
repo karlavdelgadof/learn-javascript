@@ -1,6 +1,7 @@
 let myLeads = ["www.awesomelead.com", "www.epiclead.com", "www.greatlead.com"]
 const inputEl = document.getElementById("input-el")
 const inputBtn = document.getElementById("input-btn")
+const ulEl = documen.getElementById("ul-el")
 // 2. Grab the unordered list and store it in a const variable called ulEl
 
 inputBtn.addEventListener("click", function() {
