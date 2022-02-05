@@ -7,20 +7,20 @@ const leadsFromLocalStorage = JSON.parse( localStorage.getItem("myLeads") )
 
 if (leadsFromLocalStorage) {
     myLeads = leadsFromLocalStorage
-    renderLeads()
+    render(myLeads)
 }
 
 // Refector the function so that it takes a parameter, leads, that it uses
 // instead of the global myLeads variable. Remember to update all invocations 
 // of the function as well.
 
-function renderLeads() {
+function render(leads) {
     let listItems = ""
-    for (let i = 0; i < myLeads.length; i++) {
+    for (let i = 0; i < leads.length; i++) {
         listItems += `
             <li>
-                <a target='_blank' href='${myLeads[i]}'>
-                    ${myLeads[i]}
+                <a target='_blank' href='${leads[i]}'>
+                    ${leads[i]}
                 </a>
             </li>
         `
@@ -31,12 +31,12 @@ function renderLeads() {
 deleteBtn.addEventListener("dblclick", function() {
     localStorage.clear()
     myLeads = []
-    renderLeads()
+    render(myLeads)
 })
 
 inputBtn.addEventListener("click", function() {
     myLeads.push(inputEl.value)
     inputEl.value = ""
     localStorage.setItem("myLeads", JSON.stringify(myLeads) )
-    renderLeads()
+    render(myLeads)
 })
